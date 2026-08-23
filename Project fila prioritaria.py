@@ -123,3 +123,54 @@ while True:
                 print(f"{amarelo}Paciente: {Nome} | Idade: {Idade}\nPrioridade ALTA \nAtendimento em até 30 minutos.{fim}")
             elif escolha == "4":
                 print(f"{verde}Paciente: {Nome} | Idade: {Idade}\nPrioridade BAIXA \nAtendimento em até 120 minutos.{fim}")
+
+        # ---------------- SUBTRIAGEM NEUROLÓGICA ----------------
+        elif sintoma_principal == "3":
+            sleep(3)
+            while True:
+                print(f"{magenta}----SELECIONE O ESTADO NEUROLÓGICO----{fim}")
+                print("1 - Convulsão ativa")
+                print("2 - Confusão mental severa")
+                print("3 - Tontura moderada")
+                print("4 - Sintomas leves")
+                escolha = input("Digite o número do sintoma: ").strip()
+                if escolha in ["1", "2", "3", "4"]:
+                    break
+                print(f"{vermelho}Opção inválida! Escolha de 1 a 4.{fim}\n")
+                    
+            sleep(3)
+            if escolha == "1":
+                print(f"{vermelho}Paciente: {Nome} | Idade: {Idade}\nPrioridade CRÍTICA \nAtendimento Imediato.{fim}")
+            elif escolha == "2":
+                print(f"{vermelho_suave}Paciente: {Nome} | Idade: {Idade}\nPrioridade MUITO ALTA \nAtendimento em até 10 minutos.{fim}")
+            elif escolha == "3":
+                print(f"{amarelo}Paciente: {Nome} | Idade: {Idade}\nPrioridade ALTA \nAtendimento em até 30 minutos.{fim}")
+            elif escolha == "4":
+                print(f"{verde}Paciente: {Nome} | Idade: {Idade}\nPrioridade BAIXA \nAtendimento em até 120 minutos.{fim}")
+
+        # ---------------- SUBTRIAGEM PREFERENCIAL ----------------
+        elif sintoma_principal == "4":
+            sleep(2)
+            while True:
+                print(f"{magenta}----VERIFICAÇÃO DE PERFIL PREFERENCIAL----{fim}")
+                print("1 - GESTANTE")
+                print("2 - IDOSO (60+)")
+                print("3 - DEFICIENTE")
+                print("4 - NENHUM")
+                escolha4 = input("Digite um número: ").strip()
+                if escolha4 in ["1", "2", "3", "4"]:
+                    break
+                print(f"{vermelho}Opção inválida! Escolha de 1 a 4.{fim}\n")
+                
+            sleep(1)
+            if escolha4 == "1":
+                print(f"{vermelho_suave}Paciente: {Nome} | Idade: {Idade}\nPrioridade MUITO ALTA \nAtendimento em até 10 minutos.{fim}")
+            elif escolha4 == "2":
+                print(f"{ciano}Paciente: {Nome} | Idade: {Idade}\nPrioridade MÉDIA \nAtendimento em até 60 minutos.{fim}")
+            elif escolha4 == "3":
+                print(f"{amarelo}Paciente: {Nome} | Idade: {Idade}\nPrioridade MÉDIA \nAtendimento em até 60 minutos.{fim}")
+            elif escolha4 == "4":
+                print(f"{verde}Paciente: {Nome} | Idade: {Idade}\nPrioridade BAIXA \nAtendimento em até 120 minutos.{fim}")
+
+        print(f"\n{verde}Triagem concluída com sucesso!{fim}\n")
+        sleep(5)
