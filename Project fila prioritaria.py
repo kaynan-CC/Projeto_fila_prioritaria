@@ -8,6 +8,7 @@ amarelo = '\033[1;33m'
 ciano = '\033[1;36m'
 magenta = '\033[1;35m'
 fim = '\033[0m'
+
 while True:
     print(f"{magenta}--------------------BEM-VINDO AO FILA ZERO--------------------{fim}")
     sleep(1)
@@ -34,3 +35,13 @@ while True:
         sleep(1)
         Nome = input("Nome: ").upper().strip()
         sleep(1)
+        
+        while True:
+            idade_input = input("Idade: ").strip()
+            if idade_input.isdigit():
+                Idade = int(idade_input)
+                if 0 <= Idade <= 120:
+                    break
+            print(f"{vermelho}Idade inválida! Digite apenas números inteiros (Ex: 25).{fim}")
+            
+        sleep(2)
