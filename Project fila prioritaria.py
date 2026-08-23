@@ -8,3 +8,29 @@ amarelo = '\033[1;33m'
 ciano = '\033[1;36m'
 magenta = '\033[1;35m'
 fim = '\033[0m'
+while True:
+    print(f"{magenta}--------------------BEM-VINDO AO FILA ZERO--------------------{fim}")
+    sleep(1)
+    print(f"{magenta}Processando...{fim}")
+    sleep(3)
+    
+    while True:
+        print(f"{magenta}----Deseja cadastrar um paciente?----{fim}")
+        print("1 - Sim")
+        print("2 - Não")
+        continuar = input("Digite o número para ação: ").strip()
+        if continuar == "1" or continuar == "2":
+            break
+        print(f"{vermelho}Opção inválida! Digite apenas 1 ou 2.{fim}\n")
+        
+    sleep(1)
+    
+    if continuar == "2":
+        print(f"{magenta}Saindo...{fim}")
+        break
+        
+    elif continuar == "1":
+        print(f"{magenta}----CADASTRO DO PACIENTE----{fim}")
+        sleep(1)
+        Nome = input("Nome: ").upper().strip()
+        sleep(1)
